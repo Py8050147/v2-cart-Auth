@@ -21,7 +21,7 @@ function Cart() {
    
   ):(
     <div className=' conatiner min-h-screen max-w-4xl md:max-w-full px-20 py-10 mx-auto bg-gray-900'>
-    <div className=' grid grid-cols-4 gap-10 mt-24'>
+    <div className=' grid grid-cols-2 gap-10 mt-24'>
       {
          products.map((product) => (
           <div key={product.id} className='col-span-1 p-5 bg-white rounded-md shadow-md'>
