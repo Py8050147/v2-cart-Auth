@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, createContext } from 'react';
+import { useContext, useEffect, useState, createContext } from 'react';
 import { account } from '../appwriteConfig';  // Ensure the correct path to appwriteConfig
 import { useNavigate } from 'react-router-dom';
 import { ID } from 'appwrite';

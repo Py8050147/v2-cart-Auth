@@ -13,18 +13,18 @@ function Cart() {
     };
   return products.length === 0 ? (
     <div className='conatiner min-h-screen max-w-4xl md:max-w-full px-20 py-10 mx-auto bg-gray-900 flex items-center justify-center'>
-      <h1 className='text-2xl text-white text-center flex items-center justify-center gap-3  divide-solid divide-x divide-black'>
+      <h1 className='text-2xl text-white text-center flex items-center justify-center gap-3  divide-solid divide-x divide-gray-500 py-5'>
     <span className='text-red-700 '>404</span>
     <span className='pl-3'>cart is empty</span>
   </h1>
     </div>
    
   ):(
-    <div className=' conatiner min-h-screen max-w-4xl md:max-w-full px-20 py-10 mx-auto bg-gray-900'>
-    <div className=' grid grid-cols-2 gap-10 mt-24'>
+    <div className=' conatiner min-h-screen max-w-4xl md:max-w-full px-20 py-32 mx-auto bg-gray-900'>
+    <div className=' grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       {
          products.map((product) => (
-          <div key={product.id} className='col-span-1 p-5 bg-white rounded-md shadow-md'>
+          <div key={product.id} className='col-span-1 lg:w-80 p-5 bg-white rounded-md shadow-md'>
             <div className=' flex align-middle justify-center'>
             <img src={product.image} alt={product.name} className='h-40 w-1/2'/>
             </div>
