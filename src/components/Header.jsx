@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../utils/AuthContext'
 
@@ -21,7 +21,7 @@ function Header() {
             <Link to='/' className=' text-white font-medium text-lg hover:text-gray-500 hover:dark:text-gray-600 transition-all delay-200 ease-in-out'>Home</Link>
             <Link to='/about' className=' text-white font-medium text-lg hover:text-gray-500 hover:dark:text-gray-600 transition-all delay-200 ease-in-out'>About</Link>
             <Link to='/cart' className=' text-white font-medium text-lg hover:text-gray-500 hover:dark:text-gray-600 transition-all delay-200 ease-in-out'>Cart</Link>
-            <button type="button" onClick={() => logoutUser} className='text-white font-medium text-lg hover:text-gray-500 hover:dark:text-gray-600 transition-all delay-200 ease-in-out'>Logout</button>
+            <button type="button" onClick={logoutUser} className='text-white font-medium text-lg hover:text-gray-500 hover:dark:text-gray-600 transition-all delay-200 ease-in-out'>Logout</button>
             </>
             ) : null
           }
