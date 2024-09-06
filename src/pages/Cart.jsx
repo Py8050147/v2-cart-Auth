@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeCart } from '../store/cartSlice'
 
@@ -26,7 +26,7 @@ function Cart() {
          products.map((product) => (
           <div key={product.id} className='col-span-1 lg:w-80 p-5 bg-white rounded-md shadow-md'>
             <div className=' flex align-middle justify-center'>
-            <img src={product.image} alt={product.name} className='h-40 w-1/2'/>
+            <img src={product.images[0]} alt={product.title} className='h-40 w-1/2'/>
             </div>
             <h2 className=' text-2xl font-bold'>{product.title}</h2>
             {/* <p className=' text-gray-500'>{product.description}</p> */}

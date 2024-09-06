@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { addCart } from '../store/cartSlice'
 
@@ -6,18 +6,19 @@ function About() {
   const dispatch = useDispatch()
   const [products, setProducts] = useState([])
   useEffect(() => {
-       (async() => {
+    // eslint-disable-next-line no-extra-semi
+     (async() => {
         try {
-          const response = await fetch('https://fakestoreapi.com/products')
+          const response = await fetch('https://dummyjson.com/products')
           const data = await response.json()
-          setProducts(data)
-          console.log(data)
+          setProducts(data.products)
+          console.log(data.products)
         } catch (error) {
           console.error(error)
           throw error
         }
        })()
-  }, [setProducts])
+  }, [])
 
   const handleClick = (product) => {
     dispatch(addCart(product))
@@ -30,7 +31,7 @@ function About() {
           products.map((product) => (
             <div key={product.id} className=' p-5 bg-white rounded-md shadow-md'>
               <div className=' flex align-middle justify-center'>
-              <img src={product.image} alt={product.name} className='h-40 w-1/2'/>
+              <img src={product.images[0]} alt={product.title} className='h-40 w-1/2'/>
               </div>
               <h2 className=' text-xl font-bold'>{product.title}</h2>
               {/* <p className=' text-gray-500'>{product.description}</p> */}
