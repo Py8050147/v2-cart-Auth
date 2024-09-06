@@ -12,7 +12,7 @@ function About() {
           const response = await fetch('https://dummyjson.com/products')
           const data = await response.json()
           setProducts(data.products)
-          console.log(data.products)
+          // console.log(data.products)
         } catch (error) {
           console.error(error)
           throw error
